@@ -1,0 +1,21 @@
+<?php
+namespace App\AspNetValidators;
+use Elitexp\AspNet\Validation\Validator;
+
+use App\AspNetValidators\{{class}}Validator;
+
+class AspNetValidationLoader{
+	//This Loader is called automatically by the AspNetServiceProvider when it is registered.
+	static function LoadValidators(){	
+		//@rule: validation rule that follows Eloquent rule
+		/*
+				e.g. 'required' => is registered to RequiredValidator()	
+				The Required Validator parses form textbox as:
+				<input type='text' data-val-required='some message' data-val='true'/>
+		*/			
+		Validator::Register('rule',new {{class}}Validator());		
+	}
+}
+
+
+?>

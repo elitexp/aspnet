@@ -1,0 +1,19 @@
+<?php
+
+namespace App;
+use Elitexp\AspNet\Model;
+
+class {{class}} extends Model
+{   
+    protected $table='{{table}}';
+
+
+    protected $fillable=[];
+
+    protected $hidden=[];
+
+    public static $rules=[];
+
+    public static $messages=[];
+
+}
