@@ -1,0 +1,59 @@
+<?php
+namespace App\AspNetValidators;
+
+use Elitexp\AspNet\Validation\ValidationRule;
+use Elitexp\Aspnet\Validation\ValidationResult;
+use Elitexp\AspNet\Validation\ClientValidationRule;
+
+class {{class}}Validator extends ValidationRule{		
+	
+	/*
+	Protected Variable List
+
+	@field 			: The model member name that the validator is working against
+	@model 			: The model passed into the form
+	@errorMessage 	: The message passed in the model using messages array
+
+	*/
+
+	/*
+		@function: isValid
+		@returns: true / ValidationResult Object
+		@parameters
+		@value: The value got from the model
+		@model: The model passed with the validation
+	*/
+	function isValid($value){
+		$ret=true;
+		
+		return $ret;
+	}
+
+	/**
+	*	@function:GetClientValidationRule
+	*	@returns: ClientValidationRule Object
+	*/
+	function GetClientValidationRule(){
+
+		$rule=new ClientValidationRule();
+		$rule->ValidationType="key";
+		//If any other parameters exist.
+		$rule->ValidationParameters['param']="value";
+		$rule->errorMessage=$this->errorMessage;
+		return $rule;
+	}
+	/*
+		@function: SetValidationData
+		@returns: void
+		@parameters
+		@message: Validation message set in the model
+		@parameters: Extra parameters acquired from the model
+	*/
+	function SetValidationData($message,$params=array()){		
+		$this->errorMessage=$message;	
+		if($this->errorMessage=="")		
+			$this->errorMessage="Some other message";
+	}
+	
+}
+?>

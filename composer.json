@@ -1,0 +1,23 @@
+{
+    "name": "elitexp/aspnet",
+    "description": "AspNet Validation for Laravel",
+    "type": "Validation",
+    "require": {
+        "illuminate/html": "~5.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sujip Maharjan",
+            "email": "elitexp2013@gmail.com"
+        }
+    ],
+    
+    "autoload": {
+        "psr-4": {
+            "Elitexp\\AspNet\\": ""            
+        }
+        
+    }
+
+}
