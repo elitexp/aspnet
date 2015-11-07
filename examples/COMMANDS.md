@@ -7,7 +7,7 @@ b. make:aspnetvalidator <br/>
 ## make:aspnetmodel
 <i>php artisan <b>make:aspnetmodel</b> modelName</i>
 
-The command is used to generate an AspNet Model (Eloquent Model) which accepts some Eloquent Validation rules as well as some other new rules. The model when used in the form builder i.e. Form Facade, supports client side as well as the server side validation in just a fly.
+The command is used to generate an AspNet Model (Eloquent Model) which accepts some Eloquent Validation rules as well as some other new rules. The model when used in the form builder i.e. Form Facade, supports client side as well as the server side validation in just a fly. The model is created in <b>App</b> directory.
 
 ## make:aspnetvalidator
 <i>php artisan <b>make:aspnetvalidator</b> validatorName</i>
