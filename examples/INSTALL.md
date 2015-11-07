@@ -1,6 +1,7 @@
 ## Installing the validator to the Laravel Project
 
-Inside the laravel, just require elitexp/aspnet. Damn too easy from composer.
+Inside the laravel, just require elitexp/aspnet. Damn too easy from composer.<br/>
+<b>composer require <i>elitexp/aspnet</i></b>
 
 ## Adding Service Provider to the Laravel
 
