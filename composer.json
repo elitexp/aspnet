@@ -2,6 +2,17 @@
     "name": "elitexp/aspnet",
     "description": "AspNet Validation for Laravel",
     "type": "Validation",
+    "keywords":[
+        "elitexp",
+        "validation",
+        "clientside",
+        "clientside validation",
+        "unobtrusive",
+        "unobtrusive validation",
+        "aspnet",
+        "jquery",
+        "jquery validation"
+    ],
     "require": {
         "illuminate/html": "~5.0"
     },
