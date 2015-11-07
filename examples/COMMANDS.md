@@ -5,5 +5,4 @@ a. make:aspnetmodel <br/>
 b. make:aspnetvalidator <br/>
 
 # make:aspnetmodel
-
-##php artisan make:aspnetmodel <modelName>
+<i>php artisan make:aspnetmodel modelName</i>
