@@ -4,22 +4,22 @@ Inside the laravel, just require elitexp/aspnet. Damn too easy from composer.
 
 ## Adding Service Provider to the Laravel
 
-Just add AspNetServiceProvider to the laravel project.
-<i>
-'providers'=>[<br/>
-	..... <br/>
-	EliteXp\AspNet\AspNetServiceProvider::class<br/>
-];<br/>
-</i>
+Just add AspNetServiceProvider to the laravel project.<br/>
+<i><pre>
+'providers'=>[
+	..... 
+	EliteXp\AspNet\AspNetServiceProvider::class
+];
+</pre></i>
 
 ## Dependencies
 The package is dependent on <b>Illuminate/Html</b> package. <br/>
-The two facades presented by illuminate/html are overridden by the package.
-<i>
-'aliases'=>[<br/>
-	....<br/>
-	'Form'=> Illuminate\Html\FormFacade::class,<br/>
-    'HTML'=> Illuminate\Html\HtmlFacade::class,<br/>
-];<br/>
-</i>
+The two facades presented by illuminate/html are overridden by the package.<br/>
+<i><pre>
+'aliases'=>[
+	....
+	'Form'=> Illuminate\Html\FormFacade::class,
+    'HTML'=> Illuminate\Html\HtmlFacade::class,
+];
+</pre></i>
 
