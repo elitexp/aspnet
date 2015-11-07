@@ -8,9 +8,9 @@ Many might have used validation provided by the Laravel framework. No doubt, it'
 
 ##Features
 
-a. Asp.Net Unobtrusive Client Side Validation support
-b. Server Side & Client side validation with plug and play feature (autoload)
-c. Ajax links & ajax form submit (will be added in due course)
+a. Asp.Net Unobtrusive Client Side Validation support<br/>
+b. Server Side & Client side validation with plug and play feature (autoload)<br/>
+c. Ajax links & ajax form submit (will be added in due course)<br/>
 d. Artisan make:aspnetmodel & make:aspnetvalidator commands for generating the validator and the model.
 
 
