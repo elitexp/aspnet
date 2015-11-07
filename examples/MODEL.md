@@ -1,34 +1,56 @@
 ## AspNet Model Example Generated
 
-<u>Command:</u><i>php artisan <b>make:aspnetmodel</b> Client</i><br/>
-<u>Generated File:</u><i>App/Client.php</i><br/>
+<b>Command: </b><i>php artisan make:aspnetmodel Client</i><br/>
+<b>Generated File: </b><i>App/Client.php</i><br/>
 
 
 <pre>
-<?php
+&lt;?php
 
 namespace App;
-
 use Elitexp\AspNet\Model;
 
-class Client extends Model
-{
-    //
-    protected $table='clients';
-    
-    protected $fillable=['name','phone','mobile'];
+class Test extends Model
+{   
 
-    //protected $hidden=['created_at','updated_at'];
+	/*
+		@table: 	tablename where the model data is stored.
+	*/
+    protected $table='tests';
 
-    public static $rules=array(
-    		"name"=>"required|website",
-    		"next"=>"remote:/clients/test,name,_token" 		
+    /*
+    	@fillable:	mass-assignable field names
+    */
+    protected $fillable=[];
 
-    	);
-    public static $messages=[
-    	"name.required"=>"Please enter your website address.",
-    	"name.website"=>"Please provide your website address correctly.",
-    	"next.remote"=>"The next field validation failed from the server."
-    ];
+    /*
+    	@hidden:	excluded fields from JSON
+    */
+    protected $hidden=[];
+
+    /*
+    	@guarded:	not mass-assignable field names
+    */
+    protected $guarded=[];
+
+    /*
+    	@rules:	validation rules for reach field.
+    	e.g. $rules=[
+    					"name"=>"required|between:5,8",
+    					"email"=>"required|email"
+    				];
+    */
+    public static $rules=[];
+
+    /*
+    	@messages:	validation messages for reach field.
+    	e.g. $messages=[
+    					"name.required"=>"Please enter your name.",
+    					"email.email"=>"Please enter email correctly."
+    				];
+    */
+    public static $messages=[];
+
 }
+
 </pre>

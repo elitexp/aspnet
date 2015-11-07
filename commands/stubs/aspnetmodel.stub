@@ -5,15 +5,43 @@ use Elitexp\AspNet\Model;
 
 class {{class}} extends Model
 {   
+
+	/*
+		@table: 	tablename where the model data is stored.
+	*/
     protected $table='{{table}}';
 
-
+    /*
+    	@fillable:	mass-assignable field names
+    */
     protected $fillable=[];
 
+    /*
+    	@hidden:	excluded fields from JSON
+    */
     protected $hidden=[];
 
+    /*
+    	@guarded:	not mass-assignable field names
+    */
+    protected $guarded=[];
+
+    /*
+    	@rules:	validation rules for reach field.
+    	e.g. $rules=[
+    					"name"=>"required|between:5,8",
+    					"email"=>"required|email"
+    				];
+    */
     public static $rules=[];
 
+    /*
+    	@messages:	validation messages for reach field.
+    	e.g. $messages=[
+    					"name.required"=>"Please enter your name.",
+    					"email.email"=>"Please enter email correctly."
+    				];
+    */
     public static $messages=[];
 
 }
