@@ -8,8 +8,8 @@
 &lt;?php
 namespace App\AspNetValidators;
 
-use Elitexp\AspNet\Validation\ValidationRule;
-use Elitexp\Aspnet\Validation\ValidationResult;
+use Elitexp\AspNet\Validation\ValidationRule;<br/>
+use Elitexp\Aspnet\Validation\ValidationResult;<br/>
 use Elitexp\AspNet\Validation\ClientValidationRule;
 
 class MinStringLengthValidator extends ValidationRule{		
@@ -69,4 +69,33 @@ class MinStringLengthValidator extends ValidationRule{
 	}
 	
 }
+?&gt;
+
+## AspNetValidationLoader.php
+
+&lt;?php
+namespace App\AspNetValidators;
+use Elitexp\AspNet\Validation\Validator;
+
+
+use App\AspNetValidators\MinStringLengthValidator;
+
+class AspNetValidationLoader{
+	//This Loader is called automatically by the AspNetServiceProvider when it is registered.
+	static function LoadValidators(){	
+		//@rule: validation rule that follows Eloquent rule
+		/*
+				e.g. 'required' => is registered to RequiredValidator()	
+				The Required Validator parses form textbox as:
+				<input type='text' data-val-required='some message' data-val='true'/>
+		*/			
+		
+		Validator::Register('minlength',new MinStringLengthValidator());
+		
+		//Considering a model with a rule "name"=>"minlength:7" 
+		//Generates <input type="text" name ="name" data-val-minlength="Some message" data-val-min-length-length="7" data-val="true"/>
+	}
+}
+
+
 ?&gt;
