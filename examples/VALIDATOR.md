@@ -5,11 +5,13 @@
 <b>Generated File 2: </b><i>App/AspNetValidators/AspNetValidationLoader.php</i><br/>
 
 ## MinStringLengthValidator.php
+
+<pre>
 &lt;?php
 namespace App\AspNetValidators;
 
-use Elitexp\AspNet\Validation\ValidationRule;<br/>
-use Elitexp\Aspnet\Validation\ValidationResult;<br/>
+use Elitexp\AspNet\Validation\ValidationRule;
+use Elitexp\Aspnet\Validation\ValidationResult;
 use Elitexp\AspNet\Validation\ClientValidationRule;
 
 class MinStringLengthValidator extends ValidationRule{		
@@ -70,9 +72,11 @@ class MinStringLengthValidator extends ValidationRule{
 	
 }
 ?&gt;
+</pre>
 
 ## AspNetValidationLoader.php
 
+<pre>
 &lt;?php
 namespace App\AspNetValidators;
 use Elitexp\AspNet\Validation\Validator;
@@ -91,7 +95,7 @@ class AspNetValidationLoader{
 		*/			
 		
 		Validator::Register('minlength',new MinStringLengthValidator());
-		
+
 		//Considering a model with a rule "name"=>"minlength:7" 
 		//Generates <input type="text" name ="name" data-val-minlength="Some message" data-val-min-length-length="7" data-val="true"/>
 	}
@@ -99,3 +103,4 @@ class AspNetValidationLoader{
 
 
 ?&gt;
+</pre>
