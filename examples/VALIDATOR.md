@@ -92,13 +92,13 @@ class AspNetValidationLoader{
 		/*
 				e.g. 'required' => is registered to RequiredValidator()	
 				The Required Validator parses form textbox as:
-				<input type='text' data-val-required='some message' data-val='true'/>
+				&lt;input type='text' data-val-required='some message' data-val='true'/&gt;
 		*/			
 		
 		Validator::Register('minlength',new MinStringLengthValidator());
 
 		//Considering a model with a rule "name"=>"minlength:7" 
-		//Generates <input type="text" name ="name" data-val-minlength="Some message" data-val-min-length-value="7" data-val="true"/>
+		//Generates &lt;input type="text" name ="name" data-val-minlength="Some message" data-val-min-length-value="7" data-val="true"/&gt;
 	}
 }
 
