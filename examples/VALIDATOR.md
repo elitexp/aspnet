@@ -3,6 +3,7 @@
 <b>Command: </b><i>php artisan make:aspnetvalidator MinStringLength</i><br/>
 <b>Generated File 1: </b><i>App/AspNetValidators/MinStringLengthValidator.php</i><br/>
 <b>Generated File 2: </b><i>App/AspNetValidators/AspNetValidationLoader.php</i><br/>
+<b>Javascript:</b><i>public/scripts/minlengthvalidator.js</i><br/>
 
 ## MinStringLengthValidator.php
 
@@ -35,7 +36,7 @@ class MinStringLengthValidator extends ValidationRule{
 		@model: The model passed with the validation
 	*/
 	function isValid($value){		
-		if(isset($value) && strlen($value)>$this->minlength)
+		if(isset($value) && strlen($value)>=$this->minlength)
 			return true;
 		$ret=new ValidationResult($this->errorMessage,$this->field);
 		return $ret;
@@ -50,7 +51,7 @@ class MinStringLengthValidator extends ValidationRule{
 		$rule=new ClientValidationRule();
 		$rule->ValidationType="minlength";
 		//If any other parameters exist.
-		$rule->ValidationParameters['length']=$this->minlength;
+		$rule->ValidationParameters['value']=$this->minlength;
 		$rule->errorMessage=$this->errorMessage;
 		return $rule;
 	}
@@ -97,10 +98,30 @@ class AspNetValidationLoader{
 		Validator::Register('minlength',new MinStringLengthValidator());
 
 		//Considering a model with a rule "name"=>"minlength:7" 
-		//Generates <input type="text" name ="name" data-val-minlength="Some message" data-val-min-length-length="7" data-val="true"/>
+		//Generates <input type="text" name ="name" data-val-minlength="Some message" data-val-min-length-value="7" data-val="true"/>
 	}
 }
 
 
 ?&gt;
+</pre>
+
+## minlength.js
+Include the script into the form and client side validation is a go.
+
+<pre>
+$.validator.addMethod("minlength", function (value, element, params) {
+    	return (value.length>=params);  	
+    
+ 
+});
+$.validator.unobtrusive.adapters.add("minlength", ["value"], function (options) {    
+    
+    options.rules["minlength"] = options.params["value"];
+    
+    options.messages["minlength"] = options.message;
+    
+});
+
+
 </pre>
