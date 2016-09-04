@@ -2,7 +2,7 @@
 Asp.Net Unobtrusive validation & Ajax Support for Laravel
 
 ## Insight
-Many might have used validation provided by the Laravel framework. No doubt, it's a good one. Others might have used Asp.Net MVC framework and its attributes to provide client-side and server side-validation. It's very easy. What I've tried to do is to use the JavaScript Library (JQuery Unobtrusive Validation) into a Laravel Project. The model defines the rules from each properties of the model, the validator just takes care of server side as well as the client side validation. What you have to do, just include the validation JavaScript scripts into the form. That's all.
+Many might have used validation provided by the Laravel framework. No doubt, it's a good one. Others might have used Asp.Net MVC framework and its attributes to provide client-side and server side-validation. It's very easy. What I've tried to do is to use the JavaScript Library (JQuery Unobtrusive Validation) into a Laravel Project. The model defines the rules from each properties of the model, the validator just takes care of server side as well as the client side validation. What you have to do, just include the validation JavaScript scripts into the form. That's all. Hope you will find it useful in every sense.
 
 
 ##Features
